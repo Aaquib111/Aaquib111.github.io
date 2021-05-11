@@ -76,61 +76,18 @@ var livePatern = {
   
   !function(){livePatern.init();}()
 
-
-  let waves = 4;
-
-  function docify(str){
-    document.getElementById('wrap').innerHTML = "";
-    for(let i = 0; i < str.length; i++){
-      let el = document.createElement('div');
-      el.className = "hoovy";
-      el.appendChild(  document.createTextNode(str.charAt(i))  );
-      el.setAttribute('data-phi',i*Math.PI/(10 - waves));
-      el.style.transform = "";
-      document.getElementById('wrap').appendChild(el);
-    }
-    document.getElementById('wrap').appendChild(document.createElement('br'));
-  }
+  const div = document.getElementById("bounce");
+  const text = div.textContent;
+  const letters = text.split("");
   
-  let omeg = 1.8,
-      ampl = 13,
-      wrap = document.getElementById('wrap'),
-      time = 0;
+  div.innerHTML = "";
   
-  function anim(){
-   
-    if(omeg * time > 2*Math.PI){
-      time = 0;
-    }
-    for(let k = 0; k < wrap.childNodes.length; k++){
-      let elem = wrap.childNodes[k];
-      let phi = elem.getAttribute('data-phi');
-      elem.style.transform = 'translateY('+ampl*Math.sin(omeg*time + phi/2) + 'px)';
-    }
-    time += 6/100;
-    requestAnimationFrame(anim);
-  };
-  
-  document.getElementById('wrap').innerHTML = "";
-  
-  document.getElementById('ampset').oninput = function(){
-    ampl = this.value;
-  }
-  document.getElementById('omegset').oninput = function(){
-    omeg = this.value;
-  }
-  document.getElementById('fonts').oninput = function(){
-    for(let i = 0; i < wrap.childNodes.length; i++){
-      wrap.childNodes[i].style.fontSize = document.getElementById('fonts').value + 'px';
-    }
-  }
-  document.getElementById('waves').oninput = function(){
-    waves = this.value;
-    docify(document.getElementById('texty').value);
-  }
-  document.getElementById('texty').oninput = function(){
-    docify(this.value);
-  }
-  
-  docify('WHAT IS YOUR NAME?');
-  anim();
+  letters.map((l, i) => {
+      const el = document.createElement("span");
+      console.log(l, i);
+      el.textContent = l;
+      el.classList.add("letter");
+      el.classList.add("letter-" + i);
+      
+      return el;
+  }).forEach(el => div.appendChild(el));

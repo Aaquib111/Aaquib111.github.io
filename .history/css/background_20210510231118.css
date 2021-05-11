@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  min-height: 100%;
+  width: 100%;
 }
 
 html, body {
@@ -57,6 +59,6 @@ input{
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  visibility: hidden;
+  visibility: false;
 }
 

@@ -132,5 +132,5 @@ var livePatern = {
     docify(this.value);
   }
   
-  docify('WHAT IS YOUR NAME?');
+  docify('AESTHETIC');
   anim();

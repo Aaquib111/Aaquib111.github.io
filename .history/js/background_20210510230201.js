@@ -111,7 +111,7 @@ var livePatern = {
     requestAnimationFrame(anim);
   };
   
-  document.getElementById('wrap').innerHTML = "";
+  wrap.innerHTML = "";
   
   document.getElementById('ampset').oninput = function(){
     ampl = this.value;
@@ -132,5 +132,5 @@ var livePatern = {
     docify(this.value);
   }
   
-  docify('WHAT IS YOUR NAME?');
+  docify('AESTHETIC');
   anim();
