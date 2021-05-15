@@ -5,17 +5,6 @@
         <title></title>
         <link rel="stylesheet" type="text/css" href="css\background.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script>
-
-        function validateForm() {
-            var x = document.forms["nameEntry"]["firstname"].value;
-            var err = document.getElementsByClassName("invalid-feedback");
-            if (x.toLowerCase() != "X") {
-            err.style.setProperty('display', 'contents');
-            return false;
-            }
-        }
-        </script>
     </head>
     <body>
         
@@ -30,18 +19,12 @@
         <div id="contain">
             <div id="wrap"></div>
             <div id="name">
-                <form method="post" name="nameEntry" action="treasure-page.html">
-                    <div class="form-row" style="flex-wrap: nowrap;">
-                        <input class="form-control form-control-lg" type="password" id="firstname" placeholder="You must be __ to pass" pattern="(Isabel)?(isabel)?( )?(Ajit)?(ajit)?">
-                        <button type="submit" class="btn btn-dark mb-2" style="margin-left: 10px;">Confirm identity</button>
-                    </div>
-                        <div id="invalid-feedback" style="color: red; display: none;">
-                            Name must be X.
-                        </div>
+                <form class="form-inline">
+                    <input class="form-control form-control-lg" type="password" placeholder="Enter name here...">
+                    <button type="submit" class="btn btn-primary mb-2" style="margin-left: 10px;">Confirm identity</button>
                 </form>
             </div>
         </div>
        <script src="js\background.js"></script>
-       <script src="js\validate.js"></script>
     </body>
 </html>

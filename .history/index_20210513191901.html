@@ -30,12 +30,12 @@
         <div id="contain">
             <div id="wrap"></div>
             <div id="name">
-                <form method="post" name="nameEntry" action="treasure-page.html">
+                <form onsubmit=return validateForm() method="post" name="nameEntry">
                     <div class="form-row" style="flex-wrap: nowrap;">
-                        <input class="form-control form-control-lg" type="password" id="firstname" placeholder="You must be __ to pass" pattern="(Isabel)?(isabel)?( )?(Ajit)?(ajit)?">
+                        <input class="form-control form-control-lg" type="password" name="firstname" placeholder="Enter name here...">
                         <button type="submit" class="btn btn-dark mb-2" style="margin-left: 10px;">Confirm identity</button>
                     </div>
-                        <div id="invalid-feedback" style="color: red; display: none;">
+                        <div class="invalid-feedback">
                             Name must be X.
                         </div>
                 </form>

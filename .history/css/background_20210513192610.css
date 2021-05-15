@@ -9,7 +9,7 @@ html, body {
 }
 
 canvas{
-
+  height: 100%;
   width: 100%;
 }
 
@@ -40,8 +40,8 @@ canvas{
   top: 55vh;
   align-items: flex-start;
 }
-#firstname:invalid ~ #invalid-feedback{
-  display:contents;
+#firstname:invalid + #invalid-feedback{
+  display: contents;
 }
 .hoovy{
   font-size: 50px;

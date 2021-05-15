@@ -9,7 +9,7 @@ html, body {
 }
 
 canvas{
-
+  height: 100%;
   width: 100%;
 }
 
@@ -22,26 +22,13 @@ canvas{
   height: 100vh;
   width: 100vw;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-height: 50vh;
+  max-height: 200px;
 } 
 
-#contain{
-  display: flex;
-  flex-direction: column;
-}
-#name{
-  align-self:center;
-  z-index: 2;
-  position: absolute;
-  left: 40vw;
-  top: 55vh;
-  align-items: flex-start;
-}
-#firstname:invalid ~ #invalid-feedback{
-  display:contents;
+#form-name{
 }
 .hoovy{
   font-size: 50px;
