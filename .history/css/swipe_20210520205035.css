@@ -223,16 +223,16 @@
                 4px 4px 0 rgba(0, 0, 0, 0.1);
   }
   @font-face {
-    font-family: digital;
-    src: url(../fonts/digital-7.ttf);
+    font-family: 'digital';
+    src: url('../fonts/digital-7.ttf') format('ttf'),
   }
   #name{
     position: relative;
+    width: 50px;
     height: 0px;
     content: "name";
     margin-left: 32px;
-    font-family: "digital";
-    font-size: 30px;
+    font-family: 'digital';
   }
   
   

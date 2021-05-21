@@ -228,11 +228,11 @@
   }
   #name{
     position: relative;
+    width: 50px;
     height: 0px;
     content: "name";
     margin-left: 32px;
     font-family: "digital";
-    font-size: 30px;
   }
   
   

@@ -111,5 +111,5 @@ function playAudio(status) {
 }
 
 function redirect(){
-    window.location.replace("confetti-preloader.html");
+    window.location.replace("confetti.html");
 }

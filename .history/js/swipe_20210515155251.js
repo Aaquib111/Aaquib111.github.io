@@ -104,12 +104,12 @@ function playAudio(status) {
 
   if (status === 'valid') {
     soundAccepted.play();
-    setTimeout(() => {  redirect(); }, 1000);
+    redirect();
   } else {
     soundDenied.play();
   }
 }
 
 function redirect(){
-    window.location.replace("confetti-preloader.html");
+    window.location.replace("http://www.w3schools.com");
 }

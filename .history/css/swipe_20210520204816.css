@@ -183,12 +183,10 @@
   
   #photo {
     position: relative;
-    width: 55px;
-    height: 80px;
+    width: 75px;
+    height: 100px;
     background-color: #aeaeae;
     background-image: url("../img/unnamed.jpg");
-    background-repeat: no-repeat;
-    background-size: auto;
     border: 2px solid #292929;
     margin-left: 16px;
     overflow: hidden;
@@ -223,16 +221,16 @@
                 4px 4px 0 rgba(0, 0, 0, 0.1);
   }
   @font-face {
-    font-family: digital;
-    src: url(../fonts/digital-7.ttf);
+    font-family: 'digital';
+    src: url('fonts/digital-7.ttf'),
   }
   #name{
     position: relative;
+    width: 50px;
     height: 0px;
     content: "name";
     margin-left: 32px;
-    font-family: "digital";
-    font-size: 30px;
+    font-family: 'digital';
   }
   
   

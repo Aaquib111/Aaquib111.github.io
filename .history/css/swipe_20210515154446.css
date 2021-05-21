@@ -183,12 +183,9 @@
   
   #photo {
     position: relative;
-    width: 55px;
-    height: 80px;
+    width: 75px;
+    height: 100px;
     background-color: #aeaeae;
-    background-image: url("../img/unnamed.jpg");
-    background-repeat: no-repeat;
-    background-size: auto;
     border: 2px solid #292929;
     margin-left: 16px;
     overflow: hidden;
@@ -196,7 +193,7 @@
   }
   
   #photo:before {
-    
+    content: "";
     position: absolute;
     right: 0;
     bottom: 0;
@@ -210,7 +207,7 @@
   }
   
   #photo:after {
-    
+    content: "";
     position: absolute;
     right: 30px;
     bottom: 45px;
@@ -222,19 +219,21 @@
     box-shadow: inset 1px 3px 0 rgba(255, 255, 255, 0.6),
                 4px 4px 0 rgba(0, 0, 0, 0.1);
   }
-  @font-face {
-    font-family: digital;
-    src: url(../fonts/digital-7.ttf);
-  }
+  
   #name{
     position: relative;
+    width: 50px;
     height: 0px;
     content: "name";
     margin-left: 32px;
-    font-family: "digital";
-    font-size: 30px;
+    font-family: 'DSEG14Classic';
   }
-  
+  @font-face {
+    font-family: 'DSEG14Classic';
+    src: url('https://thomaspark.co/projects/among-us-card-swipe/fonts/DSEG14-Classic/DSEG14Classic-Regular.woff2') format('woff2'),
+         url('fonts/DSEG14Classic-Regular.woff') format('woff'),
+         url('https://thomaspark.co/projects/among-us-card-swipe/fonts/DSEG14-Classic/DSEG14Classic-Regular.ttf')  format('truetype');
+  }
   
   @keyframes jitter {
     from {
