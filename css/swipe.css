@@ -182,13 +182,14 @@
   }
   
   #photo {
-    background-color: #aeaeae;
-    background-size: auto;
-    border: 2px solid #292929;
-    margin-left: 5px;
-    padding: 0;
-    overflow: clip;
-    pointer-events: none;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    object-fit: scale-down;
+    width: 4rem; /* 64px */
+    margin-left: 0.75rem; /* 12px */
+    margin-right: 0.5rem;
+    border-radius: 0.5rem; /* 8px */
   }
   
   #photo:before {
@@ -223,9 +224,16 @@
     src: url(../fonts/digital-7.ttf);
   }
   #name{
+    position: relative;
+    padding-top: 1.7rem;
+    padding-left: 0.15rem;
     content: "name";
     font-family: "digital";
     font-size: 30px;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
   }
   
   
