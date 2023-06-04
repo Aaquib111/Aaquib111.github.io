@@ -182,16 +182,12 @@
   }
   
   #photo {
-    position: relative;
-    width: 55px;
-    height: 80px;
     background-color: #aeaeae;
-    background-image: url("../img/unnamed.jpg");
-    background-repeat: no-repeat;
     background-size: auto;
     border: 2px solid #292929;
-    margin-left: 16px;
-    overflow: hidden;
+    margin-left: 5px;
+    padding: 0;
+    overflow: clip;
     pointer-events: none;
   }
   
@@ -227,10 +223,7 @@
     src: url(../fonts/digital-7.ttf);
   }
   #name{
-    position: relative;
-    height: 0px;
     content: "name";
-    margin-left: 32px;
     font-family: "digital";
     font-size: 30px;
   }
