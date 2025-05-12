@@ -68,7 +68,6 @@ More info about configuring Academic Pages can be found in [the guide](https://a
 
 <!-- Include news -->
 <style>
-    /* in your stylesheet */
 .timeline {
   list-style: none;
   margin:   0;
@@ -87,15 +86,29 @@ More info about configuring Academic Pages can be found in [the guide](https://a
 .timeline li {
   position: relative;
   margin: 1.5em 0 1.5em 40px;
+  padding-left: 20px;
+}
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -27px;           
+  top:  0.25em;          
+  width: 12px;           
+  height: 12px;
+  border: 2px solid #3B6CB8;
+  background: white;
+  border-radius: 50%;
 }
 .timeline .date {
-  font-weight: bold;
   display: block;
-  margin-bottom: 0.5em;
+  font-weight: bold;
+  margin-bottom: 0.25em;
 }
 
+
 </style>
-## Recent news
+
+## news
 
 <ul class="timeline">
   <li>
