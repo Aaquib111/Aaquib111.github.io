@@ -1,0 +1,41 @@
+<style>
+    /* in your stylesheet */
+.timeline {
+  list-style: none;
+  margin:   0;
+  padding:  0;
+  position: relative;
+}
+.timeline:before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #ddd;
+}
+.timeline li {
+  position: relative;
+  margin: 1.5em 0 1.5em 40px;
+}
+.timeline .date {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+</style>
+## Recent news
+
+<ul class="timeline">
+  <li>
+    <span class="date">Jan 2023</span>
+    MEMIT was accepted to ICLR ’23! We’ve scaled ROME to 100× state-of-the-art model editors [twitter] [hn]
+  </li>
+  <li>
+    <span class="date">Sep 2022</span>
+    ROME will appear in NeurIPS ’22! [twitter]
+  </li>
+  <!-- … -->
+</ul>
