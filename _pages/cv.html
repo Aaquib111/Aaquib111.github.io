@@ -1,0 +1,35 @@
+---
+layout: archive
+title: "CV"
+permalink: /cv/
+author_profile: true
+redirect_from:
+  - /resume
+---
+
+{% include base_path %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+<script>
+  const url = 'Aaquib_Syed_CV.pdf'; // Replace with the actual PDF file path
+
+  const canvas = document.getElementById('pdf-canvas');
+  const context = canvas.getContext('2d');
+
+  pdfjsLib.getDocument(url).promise.then(pdf => {
+    pdf.getPage(1).then(page => {
+      const viewport = page.getViewport({ scale: 1.5 });
+      canvas.width = viewport.width;
+      canvas.height = viewport.height;
+
+      const renderContext = {
+        canvasContext: context,
+        viewport: viewport
+      };
+      page.render(renderContext);
+    });
+  });
+</script>
+
+<div id="pdf-viewer">
+  <canvas id="pdf-canvas"></canvas>
+</div>
