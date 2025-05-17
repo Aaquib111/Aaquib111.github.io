@@ -10,7 +10,7 @@ redirect_from:
 {% include base_path %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
 <script>
-  const url = 'Aaquib_Syed_CV.pdf'; // Replace with the actual PDF file path
+  const url = '/images/Aaquib_Syed_CV.pdf'; // Replace with the actual PDF file path
 
   const canvas = document.getElementById('pdf-canvas');
   const context = canvas.getContext('2d');
@@ -31,5 +31,7 @@ redirect_from:
 </script>
 
 <div id="pdf-viewer">
-  <canvas id="pdf-canvas"></canvas>
+  <object data="/images/Aaquib_Syed_CV.pdf" type="application/pdf" width="100%">
+    <p>Unable to display PDF file. <a href="/images/Aaquib_Syed_CV.pdf">Download</a> instead.</p>
+  </object>
 </div>

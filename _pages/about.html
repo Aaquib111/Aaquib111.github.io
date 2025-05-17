@@ -2,18 +2,23 @@
 permalink: /
 title: "Aaquib Syed"
 author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
+redirect_from:
+- /about/
+- /about.html
 ---
 
 {% include base_path %}
 
-<p>Hi! I am a 3rd year student at the University of Maryland studying computer science and mathematics.</p>
+<p>Hi there! I am a 3rd year student at the University of Maryland studying computer science and mathematics. Welcome to my
+  website :)</p>
 
-<p>These days I am thinking about AI safety, particularly in interpretability, measuring AI capabilities progress, and solving present day biasing/unfaithfulness issues.</p>
+<p>These days I am thinking about AI safety, particularly in interpretability, evaluations for measuring capabilities
+  progress, and
+  methods to detect & reduce biasing/unfaithfulness issues, especially in present-day models.</p>
 
-<p>This website is still a WIP!</p>
+<p>This website is a collection of my prior work and current musings. You should check out the "News" section
+  below to see what I am up to, browse the "Publications" and "CV" tab if you're interested in collaborating or hiring, and the "Blog Posts" tab for my latest thoughts. 
+  My contacts are on the sidebar, feel free to reach out! Lastly, if you want an awkward video intro of myself, check out the video tab.</p>
 
 <!-- This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! -->
 
@@ -68,44 +73,46 @@ More info about configuring Academic Pages can be found in [the guide](https://a
 {% endfor %} -->
 
 <style>
-.timeline {
-  list-style: none;
-  margin:   0;
-  padding:  0;
-  position: relative;
-}
-.timeline:before {
-  content: "";
-  position: absolute;
-  left: 18px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: #ddd;
-}
-.timeline li {
-  position: relative;
-  margin: 1.5em 0 1.5em 40px;
-  padding-left: 20px;
-}
-.timeline li::before {
-  content: "";
-  position: absolute;
-  left: -27px;           
-  top:  0.25em;          
-  width: 12px;           
-  height: 12px;
-  border: 2px solid #3B6CB8;
-  background: white;
-  border-radius: 50%;
-}
-.timeline .date {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 0.25em;
-}
+  .timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
 
+  .timeline:before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #ddd;
+  }
 
+  .timeline li {
+    position: relative;
+    margin: 1.5em 0 1.5em 40px;
+    padding-left: 20px;
+  }
+
+  .timeline li::before {
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 0.25em;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #3B6CB8;
+    background: white;
+    border-radius: 50%;
+  }
+
+  .timeline .date {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.25em;
+  }
 </style>
 
 <h2> news </h2>
@@ -113,15 +120,21 @@ More info about configuring Academic Pages can be found in [the guide](https://a
 <ul class="timeline">
   <li>
     <span class="date">May 2025</span>
-    <p>My work on mechanistic unlearning was accepted to ICML 2025 as a spotlight paper! This paper presents a technique to robustly unlearn factual associations in LLMs, outperforming existing baselines. I will be in Vancouver presenting this work.</p>
+    <p>My work on mechanistic unlearning was accepted to ICML 2025 as a spotlight paper! This paper presents a technique
+      to robustly unlearn factual associations in LLMs, outperforming existing baselines. I will be in Vancouver
+      presenting this work.</p>
   </li>
   <li>
     <span class="date">June 2024</span>
-    <p>My work on studying refusal behaviors in LLMs as part of MATS 5.0 has been accepted into NeurIPS 2024! This work is the current fastest method to undo safety finetuning in LLMs, leading to <a href="https://huggingface.co/models?search=abliterated"> thousands of new models and a ton of public attention</a>.</p>
+    <p>My work on studying refusal behaviors in LLMs as part of MATS 5.0 has been accepted into NeurIPS 2024! This work
+      is the current fastest method to undo safety finetuning in LLMs, leading to <a
+        href="https://huggingface.co/models?search=abliterated"> thousands of new models and a ton of public
+        attention</a>.</p>
   </li>
   <li>
     <span class="date">May 2024</span>
-    <p>After my time at MATS, I will be joining Google as a software engineer intern on the AdsML team! I am working on optimizing AI models across Ads product areas.</p>
+    <p>After my time at MATS, I will be joining Google as a software engineer intern on the AdsML team! I am working on
+      optimizing AI models across Ads product areas.</p>
   </li>
   <li>
     <span class="date">January 2024</span>
@@ -132,22 +145,23 @@ More info about configuring Academic Pages can be found in [the guide](https://a
   <li>
     <span class="date">October 2023</span>
     <p>
-      My paper on Edge Attribution Patching, the current fastest way to attribute model behaviors back to their components, has been accepted into BlackboxNLP at EMNLP! 
+      My paper on Edge Attribution Patching, the current fastest way to attribute model behaviors back to their
+      components, has been accepted into BlackboxNLP at EMNLP!
     </p>
   </li>
   <li>
     <span class="date">June 2023</span>
     <p>
-      I joined <a href="https://www.arena.education/"> ARENA 2.0</a> a research accelerator program for people looking to skill up in ML research.
+      I joined <a href="https://www.arena.education/"> ARENA 2.0</a> a research accelerator program for people looking
+      to skill up in ML research.
     </p>
   </li>
   <li>
     <span class="date">January 2023</span>
     <p>
-      I just joined Capital One as a software engineer intern, on their news recommendations team! I am working on automating news recommendations to specialized risk analysts.
+      I just joined Capital One as a software engineer intern, on their news recommendations team! I am working on
+      automating news recommendations to specialized risk analysts.
     </p>
   </li>
   <!-- … -->
 </ul>
-
-<h2> my papers </h2>
