@@ -28,8 +28,8 @@ main:
   - title: "CV"
     url: /cv/
     
-  - title: "Video"
-    url: /video/
+  # - title: "Video"
+  #   url: /video/
     
   # - title: "Guide"
   #   url: /markdown/
