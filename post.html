@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Aaquib Syed</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Include Marked.js for Markdown parsing -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         .post-container {
@@ -14,7 +13,6 @@
             margin: 0 auto;
         }
 
-        /* Markdown content styling */
         .post-content h1 {
             border-bottom: 2px solid var(--divider-color);
             padding-bottom: 10px;
@@ -38,17 +36,15 @@
         <a href="index.html">← Back to Home</a>
     </div>
 
-    <!-- Container where the markdown content will be rendered -->
     <div id="post-content" class="post-content">
         <p>Loading post...</p>
     </div>
 
     <script src="script.js"></script>
     <script>
-        // Post Loader Logic
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
-            const slug = urlParams.get('slug'); // Expects e.g. "posts/2025-05-16-unwanted_guests.md"
+            const slug = urlParams.get('slug');
 
             if (slug) {
                 fetch(slug)
@@ -60,7 +56,6 @@
                         const contentDiv = document.getElementById('post-content');
                         contentDiv.innerHTML = marked.parse(markdown);
 
-                        // Optional: Update page title based on the first h1 if available
                         const h1 = contentDiv.querySelector('h1');
                         if (h1) {
                             document.title = h1.innerText + " - Aaquib Syed";
