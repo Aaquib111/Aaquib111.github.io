@@ -1,0 +1,220 @@
+:root {
+    /* Default Light Mode */
+    --bg-color: #ECE4D5;
+    --text-color: #000;
+    --link-color: #0000EE;
+    --visited-color: #0000EE;
+    --hover-bg: #eee;
+    --border-color: #000;
+    --divider-color: #000;
+
+    /* Highlight uses Dark Mode colors */
+    --highlight-bg: #3D001F;
+    --highlight-text: #ECE4D5;
+}
+
+/* Maroon Dark Mode */
+body.dark-mode {
+    --bg-color: #3D001F;
+    /* Deep Maroon */
+    --text-color: #ECE4D5;
+    /* Off-white */
+    --link-color: #EF6F6C;
+    /* Light red/pink for links */
+    --visited-color: #EF6F6C;
+    /* Muted red for visited */
+    --hover-bg: #4a0f14;
+    --divider-color: #ECE4D5;
+    /* Slightly lighter maroon for hover */
+    --border-color: #ECE4D5;
+
+    /* Highlight uses Light Mode colors */
+    --highlight-bg: #ECE4D5;
+    --highlight-text: #3D001F;
+}
+
+@keyframes highlight-fade {
+    0% {
+        background-color: transparent;
+    }
+
+    15% {
+        background-color: var(--highlight-bg);
+        color: var(--highlight-text);
+    }
+
+    85% {
+        background-color: var(--highlight-bg);
+        color: var(--highlight-text);
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+/* The "Nanobanana" approach: Minimal CSS for maximum readability. */
+body {
+    /* Use system default sans-serif font for raw look */
+    font-family: "Cormorant Garamond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    /* Constraint layout so it doesn't stretch too wide */
+    max-width: 700px;
+    margin: 4em auto;
+    padding: 0 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Brutalist touches: raw headers and dividers */
+h1 {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-weight: 700;
+    margin-top: 2em;
+    border-bottom: 2px solid var(--divider-color);
+    /* Harsh, functional divider */
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+/* Classic web hyperlinks */
+a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    color: var(--link-color);
+}
+
+a:visited {
+    color: var(--visited-color);
+}
+
+a:hover {
+    background-color: var(--hover-bg);
+}
+
+/* Specific list styling for a raw look */
+ul {
+    padding-left: 20px;
+    list-style-type: square;
+    /* Slightly harsher than default circles */
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+.contact-bar {
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+.publication-meta {
+    font-size: 0.85em;
+    line-height: 1.4;
+    display: block;
+    /* Ensures it starts on a new line if needed, though we use <br> inside */
+    margin-top: 0.1em;
+}
+
+.profile-container {
+    /* Layout positioning moves here */
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+
+    /* Constrain the zoomed image */
+    width: 120px;
+    overflow: hidden;
+
+    /* Border goes on the frame now */
+    border: 2px solid var(--border-color);
+}
+
+.profile-pic {
+    display: block;
+    width: 120%;
+    height: auto;
+
+    /* Desktop Zoom Effect: Scale up and anchor to top-left area */
+    transform: scale(1.35);
+    transform-origin: 20% 20%;
+}
+
+/* Mobile fix: On small screens, center the image */
+@media (max-width: 600px) {
+    .profile-container {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
+
+        /* Mobile adjustments: wider and cropped */
+        width: 100%;
+        max-width: 350px;
+        height: 250px;
+    }
+
+    .profile-pic {
+        /* Reset zoom for mobile, use cover logic */
+        transform: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+    }
+}
+
+header {
+    /* Contain the floated image so it doesn't affect the main content */
+    display: flow-root;
+}
+
+
+/* Class to apply the animation via JS */
+.highlight-active {
+    animation: highlight-fade 0.8s ease-out;
+    border-radius: 4px;
+    /* Slight rounded corners for the highlight block */
+    padding: 0 5px;
+    /* Add some padding so the background doesn't look cramped */
+    margin-left: -5px;
+    /* Offset the padding to keep alignment */
+}
+
+.theme-toggle {
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    background: none;
+    color: var(--text-color);
+    padding: 5px 10px;
+    font-family: inherit;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.pdf-container {
+    width: 100%;
+    height: 100vh;
+    border: 1px solid var(--border-color);
+}
+
+.nav-bar {
+    margin-bottom: 2em;
+    font-weight: bold;
+}
+
+/* CV Page Mobile Optimizations */
+@media (max-width: 600px) {
+    .pdf-container {
+        height: 75vh;
+    }
+}
